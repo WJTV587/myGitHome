@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="test" extends="struts-default" namespace="/">
+	<action name="user_*" class="userAction" method="{1}">
+	<result name="loginfalse">/login.jsp</result>
+	<result name="loginture">/left.jsp</result>
+	</action>
+	
+	<action name="customer_*" class="customerAction" method="{1}">
+	<result name="toList">/list.jsp</result>
+	<result name="toAddCustomerListPage">/add.jsp</result>
+	<result name="addOneCustomer">/left.jsp</result>
+	<result name="toEditCustomerPage">/edit.jsp</result>
+	<result name="updateOneCustomer">/left.jsp</result>
+	<result name="deleteOneCustomer">/left.jsp</result>
+	<result name="findByCondition">/list.jsp</result>
+	
+	</action>
+	</package>
+	 
+</struts>
+
+
+

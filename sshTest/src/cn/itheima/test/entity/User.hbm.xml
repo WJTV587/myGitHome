@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+    <class name="cn.itheima.test.entity.User" table="t_user">
+    <id name="uid" column="uid">
+    <generator class="native"></generator>
+    </id>
+    <property name="username" column="username"></property>
+    <property name="nickname" column="nickname"></property>
+    <property name="password" column="password"></property>
+    <property name="phoneCheckCode" column="phoneCheckCode"></property>
+    <property name="checkCode" column="checkCode"></property>
+	 <set name="customer">
+	 <key column="cust_user_id"></key>
+	 <one-to-many class="cn.itheima.test.entity.Customer" />
+	 </set>   
+    </class>
+    </hibernate-mapping>
